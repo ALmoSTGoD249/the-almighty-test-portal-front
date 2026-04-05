@@ -11,7 +11,7 @@
 }
 
 [data-theme="light"]{
-  --bg:#f3f4f6;                     /* softer neutral background */
+  --bg:#f3f4f69e;                     /* softer neutral background */
   --glass:rgba(255,255,255,0.7);    /* less transparent, more solid */
   --border:rgba(0,0,0,0.08);        /* slightly stronger borders */
   --text:#111827;                   /* deeper text */
