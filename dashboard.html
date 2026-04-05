@@ -152,7 +152,7 @@
     const greeting = document.getElementById("greetingText");
 
     if (greeting) {
-      greeting.textContent = `Welcome back, ${user.username || "User"}`;
+      greeting.innerHTML = `Welcome back, <span class="username">${user.username}</span>`;
     }
   }
 </script>
