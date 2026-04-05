@@ -21,7 +21,7 @@
 <main>
   <div class="container">
 
-    <h1>Choose Your Test</h1>
+    <h1 id="welcomeText">Choose Your Test</h1>
     <p>Select a domain to begin your mock test</p>
 
     <!-- CORE DOMAINS -->
@@ -140,5 +140,21 @@
 </main>
 
 <script src="scripts/script.js"></script>
+<script>
+  const userData = localStorage.getItem("user");
+
+  if (!userData) {
+    // Not logged in → redirect
+    window.location.href = "index.html";
+  } else {
+    const user = JSON.parse(userData);
+
+    const heading = document.getElementById("welcomeText");
+
+    if (heading) {
+      heading.textContent = `Hi ${user.username}, Choose Your Test`;
+    }
+  }
+</script>
 </body>
 </html>
