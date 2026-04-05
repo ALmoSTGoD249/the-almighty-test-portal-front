@@ -10,14 +10,13 @@
   --blur:18px;
 }
 
-/* LIGHT MODE */
 [data-theme="light"]{
-  --bg:#e8ecf1;
-  --glass:rgba(255,255,255,0.55);
-  --border:rgba(0,0,0,0.06);
-  --text:#1f2937;
+  --bg:#f3f4f6;                     /* softer neutral background */
+  --glass:rgba(255,255,255,0.7);    /* less transparent, more solid */
+  --border:rgba(0,0,0,0.08);        /* slightly stronger borders */
+  --text:#111827;                   /* deeper text */
   --muted:#6b7280;
-  --accent:#5b5fe6;
+  --accent:#4f46e5;                 /* slightly richer accent */
 }
 
 /* GLOBAL SCALE */
