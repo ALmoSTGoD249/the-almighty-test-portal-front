@@ -3,6 +3,7 @@ const title = document.getElementById("formTitle");
 const sub = document.getElementById("formSub");
 const switchBtn = document.getElementById("switchBtn");
 const switchText = document.getElementById("switchText");
+const API = location.hostname === "localhost" || location.hostname === "127.0.0.1" ? "http://127.0.0.1:8000" : "https://the-almighty-test-portal-back.onrender.com";
 
 let isLogin = true;
 
@@ -50,7 +51,7 @@ form.addEventListener("submit", async (e) => {
       const email = inputs[0].value;
       const password = inputs[1].value;
 
-      const res = await fetch("http://127.0.0.1:8000/login", {
+      const res = await fetch(`${API}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -73,7 +74,7 @@ form.addEventListener("submit", async (e) => {
       const email = inputs[1].value;
       const password = inputs[2].value;
 
-      const res = await fetch("http://127.0.0.1:8000/register", {
+      const res = await fetch(`${API}/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
