@@ -21,9 +21,9 @@
 <main>
   <div class="container">
 
-    <h1 id="welcomeText">Choose Your Test</h1>
-    <h1> Choose your Test</h1>
-    <p>Select a domain to begin your mock test</p>
+    <p id="greetingText" class="greeting"></p>
+    <h1>Choose Your Test</h1>
+    <p class="subtitle">Select a domain to begin your mock test</p>
 
     <!-- CORE DOMAINS -->
     <div class="section">
@@ -145,15 +145,14 @@
   const userData = localStorage.getItem("user");
 
   if (!userData) {
-    // Not logged in → redirect
     window.location.href = "index.html";
   } else {
     const user = JSON.parse(userData);
 
-    const heading = document.getElementById("welcomeText");
+    const greeting = document.getElementById("greetingText");
 
-    if (heading) {
-      heading.textContent = `Welcome, ${user.username}`;
+    if (greeting) {
+      greeting.textContent = `Welcome back, ${user.username || "User"}`;
     }
   }
 </script>
